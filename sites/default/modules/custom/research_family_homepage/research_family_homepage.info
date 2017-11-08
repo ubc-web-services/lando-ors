@@ -1,0 +1,11 @@
+name = Theme block for the Research Family Site homepage
+description = Adds a theme block for homepage content.
+package = UBC IT Web Services
+php = 5.2
+core = 7.x
+files[] = research_family_homepage.module
+
+version = "7.x-1.x"
+core = "7.x"
+project = "research_family_homepage"
+

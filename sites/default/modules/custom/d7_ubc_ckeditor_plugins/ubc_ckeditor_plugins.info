@@ -1,0 +1,7 @@
+name = UBC CKEditor Plugins
+description = Extra ckeditor wysiwyg plugins, widgets to add UBC/CLF specific markup and styles
+package = UBC IT Web Services
+
+core = 7.x
+dependencies[] = ckeditor
+files[] = css/ubc_ckeditor_plugins.css

@@ -1,0 +1,47 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: veades
+ * Date: 2015-04-17
+ * Time: 2:29 PM
+ */
+
+/**
+ * Implements hook_ckeditor_plugin().
+ */
+function ckeditor_plugins_ckeditor_plugin() {
+		
+    return array(
+        'btgrid' => array(
+          'name' => 'btgrid',
+          'desc' => t('CKEditor widget to insert Bootstrap 3 Grids.'),
+          'path' => drupal_get_path('module', 'ckeditor_plugins') . '/plugins/btgrid/',
+          'buttons' => array(
+            'btgrid' => array(
+              'label' => 'Insert Bootstrap 3 Grids',
+              'icon' => 'icons/btgrid.png',
+            ),
+          ),
+        ),
+        
+    );
+}
+
+/**
+ * Implements hook_entity_view().
+ */
+/*
+function ubc_ckeditor_plugins_entity_view($entity, $type, $view_mode, $langcode) {
+
+    // Make the jQuery UI Accordion plugin available.
+    drupal_add_library('system', 'ui.accordion');
+    // Load our JS file that implements jQuery UI Accordion.
+    drupal_add_js(drupal_get_path('module', 'ckeditor_plugins') . '/js/ubc_ckeditor_plugins.js');
+
+}
+*/
+
+/*function ubc_ckeditor_plugins_ckeditor_settings_alter(&$settings, $conf) {
+    // Change the ckeditor config path.
+    $settings['customConfig'] = drupal_get_path('module', 'ubc_ckeditor_plugins') . '/ckeditor.config.js';
+}*/

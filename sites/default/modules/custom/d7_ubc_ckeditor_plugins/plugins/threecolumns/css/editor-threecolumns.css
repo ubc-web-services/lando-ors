@@ -1,0 +1,38 @@
+.columns-3 {
+    position: relative;
+    margin: 10px;
+    background: #eee;
+    border: 1px dashed #ddd;
+    box-sizing: border-box;
+}
+.columns-3 [class*="span"] {
+    float: left;
+    width: 30%;
+    margin: 5px;
+    box-shadow: 0 1px 1px #ddd inset;
+    border: 1px solid #cccccc;
+    background: #fff;
+    padding: 1em;
+}
+.columns-3:before {
+  background: none repeat scroll 0 0 #007eab;
+  color: #fff;
+  content: "3 Columns";
+  opacity: 0.65;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: table;
+  padding: 2px 4px;
+  border-bottom-left-radius: 3px;
+}
+.columns-3:after {
+  content: " "; 
+  display: table; 
+  clear: both;
+}
+/* fix for resized images */
+.columns-3 img {
+	width: 100%;
+	height: auto;
+}

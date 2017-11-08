@@ -1,0 +1,289 @@
+
+body.imce #log-wrapper,
+body.imce #log-prv-wrapper #log-resizer.x-resizer,
+body.imce #log-clearer {
+  display: none;
+}
+
+body.imce .y-resizer {
+  height: 6px;
+  background-color: white;
+}
+
+body.imce #log-prv-wrapper {
+  border: none;
+  background-color: #EBEBEB;
+}
+
+body.imce #browse-wrapper {
+  border: none;
+}
+
+
+body.imce ul.secondary li {
+  border: none;
+}
+
+
+body.imce table#file-list {
+  border-top: 2px solid #C0C0C0;
+}
+
+body.imce table.files td {
+  border-top: 1px solid #C0C0C0;
+  border-bottom: 1px solid #C0C0C0;
+  cursor: pointer;
+  color: #000;
+}
+
+.op-content label, .op-content .form-checkboxes, .op-content .form-checkboxes .form-item {
+  color: #000;
+}
+
+body.imce a,
+body.imce div {
+  outline:none;
+  color: #027AC6
+}
+
+body.imce ul.secondary li {
+  margin:0 0.4em;
+  padding: 0px;
+}
+
+body.imce #op-contents .op-content {
+  border: 1px solid #ccc;
+}
+
+body.imce #ops-wrapper {
+  background: transparent;
+  border: none;
+  padding: 5px;
+}
+
+body.imce #navigation-header span {
+  background: none;
+  padding-left: 5px;
+}
+
+body.imce #navigation-header a.imce-close-nav {
+  float: right;
+  position: relative;
+  top: 3px;
+  right: 5px;
+  color: #888;
+  padding: 2px 6px;
+  text-align: center;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+}
+
+body.imce #navigation-header a.imce-close-nav:hover {
+  text-decoration: none;
+  background: #ccc;
+}
+
+
+#imce-content, #imce-content * {
+  font: 14px/16px "Open Sans", "Segoe UI", "Helvetica", sans-serif !important;
+}
+#ops-list a span {
+  color: inherit !important;
+}
+#imce-content h4 {
+  font-weight: bold !important;
+}
+
+body.imce ul#ops-list li a, 
+body.imce ul#ops-list li a:link, 
+body.imce ul#ops-list li a:visited, 
+body.imce ul#ops-list li a:active, 
+body.imce #imce-content #edit-upload, 
+body.imce #imce-content #edit-thumb, 
+body.imce #imce-content #edit-resize {
+  background: #eee;
+  padding: 4px 10px;
+  text-align: center;
+  color: #333;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid #b6b6b6;
+  border-bottom-color: #999;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .5), 0 0 2px rgba(255, 255, 255, .15) inset, 0 1px 0 rgba(255, 255, 255, .15) inset;
+  border-radius: 0;
+  box-sizing: border-box;
+  white-space:nowrap;
+  width:auto;
+  margin:0 15px 0 0;
+}
+body.imce ul#ops-list li a:hover, 
+body.imce ul#ops-list li a:hover, 
+body.imce ul#ops-list li a:active, 
+body.imce #imce-content #edit-upload:hover, 
+body.imce #imce-content #edit-thumb:hover, 
+body.imce #imce-content #edit-resize:hover {
+  border-color: #0074BD;
+  box-shadow: none;
+  text-decoration: none;
+  color: #fff !important;
+  background: #0074BD !important;
+}
+body.imce ul#ops-list li a:before {
+  //content: '\F06A';
+  font-family: 'ubc_imce';
+  position: realtive;
+  display: inline-block;
+  font-size: 1.25em;
+  margin-top: -2px;
+  padding-right: 4px;
+  vertical-align: middle;
+}
+
+body.imce ul#ops-list li a[name="upload"]:before {
+  content: '\e810';
+}
+body.imce ul#ops-list li a[name="thumb"]:before {
+  content: '\e802';
+}
+body.imce ul#ops-list li a[name="delete"]:before {
+  content: '\e80f';
+}
+body.imce ul#ops-list li a[name="resize"]:before {
+  content: '\e80e';
+}
+body.imce ul#ops-list li a[name="sendto"]:before {
+  content: '\e80a';
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+body.imce ul#ops-list li a[name="help"]:before {
+  content: '\e809';
+}
+
+#message-box {
+  border: none !important;
+  background-color: white !important;
+  padding: 0 !important;
+}
+#imce-content div.message {
+  background: none !important;
+  padding: 1.5em 1.5em 1.5em 3em !important;
+  margin: 0 !important;
+}
+
+#imce-content div.error {
+  border: 1px solid #ebccd1 !important;
+  background-color: #f2dede !important;
+  position: relative;
+  color: #a94442;
+}
+/* ICONS - require fontaweome in visible theme 
+----------------------------------------------
+*/
+#imce-content div.error:before {
+  content: '\e811';
+  font-family: 'ubc_imce';
+  position: absolute;
+  left: .5em;
+  top: .75em;
+  display: block;
+  font-size: 2em;
+}
+
+
+#log-messages {
+  border: none !important;
+}
+
+/* NAVIGATION */
+#navigation-tree li span.expander {
+  width: 20px !important;
+  position: relative;
+}
+#navigation-tree li span.expander:after {
+  font-family: 'ubc_imce';
+  content: '\e801';
+  position: absolute;
+  top: 0;
+  display: block;
+  font-size: 1.125em;
+}
+#navigation-tree li.expanded >  span.expander:after {
+  content: '\e800';
+}
+#navigation-tree li.leaf > span.expander:after {
+  content: '\e80d';
+}
+#navigation-tree li,
+#navigation-tree li.expanded,
+#navigation-tree li a.folder,
+#navigation-tree li.root > a.folder,
+#navigation-tree li a.active {
+  background: none !important;
+  background-image: none !important;
+  position: relative;
+}
+#navigation-tree li a.folder:before{
+  font-family: 'ubc_imce';
+  content: '\e80b';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  font-size: 1.125em;
+}
+body.imce #navigation-tree li.expanded > a.folder:before,
+body.imce #navigation-tree li > a.folder.active:before {
+  content: '\e80c';
+}
+
+/* FILE LIST */
+body.imce #navigation-header,
+body.imce #file-header-wrapper {
+  background: none;
+  background-color: #ddd;
+}
+body.imce table#file-list {
+  border-top: none !important;
+  box-sizing: border-box;
+}
+body.imce #file-list td {
+  border-top: none !important;
+  border-bottom: none !important;
+  padding: 6px !important;
+}
+body.imce #file-list tr:hover td,
+body.imce #file-list tr.selected td {
+  background: inherit !important;
+}
+body.imce #file-list tr:hover {
+  background-color: #ddd;
+}
+body.imce #file-list tr.selected,
+body.imce #file-list tr.selected:hover {
+  background-color: #444;
+}
+
+/* MISC */
+body.imce #dir-stat {
+  background-color: #eee;
+  color: #666 !important;
+  border-radius: 0 3px 0 0;
+  border: 1px solid #ccc;
+  border-width: 1px 1px 0 0;
+}
+body.imce #dir-stat span {
+  color: #666 !important;
+}
+
+#imce-content .fs-checkbox-marker {
+  background: #ffffff  !important;
+  border: 1px solid #cccccc !important;
+  float: left !important;
+  margin: 0 10px 0 0 !important;
+}
+#imce-content .fs-checkbox {
+  display: inline-block;
+}

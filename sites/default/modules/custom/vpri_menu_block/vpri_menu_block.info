@@ -1,0 +1,9 @@
+name = "VPRI Menu Block"
+description = "Custom module to extend menu block to handle entity decoding so can add 'em' tags to menu title to force line break via CSS"
+package = UBC IT Web Services
+
+core = 7.x
+dependencies[] = menu_block
+
+
+files[] = vpri_menu_block.module

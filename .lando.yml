@@ -1,0 +1,6 @@
+name: ors
+recipe: drupal7
+config:
+  webroot: .
+	php: '5.4'
+	

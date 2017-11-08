@@ -1,0 +1,42 @@
+.columns-2 {
+  position: relative;
+  margin: 10px;
+  background: #eee;
+  border: 1px dashed #ddd;
+  box-sizing: border-box;
+}
+.columns-2 [class*="col-"] {
+  float: left;
+  width: 45%;
+}
+.col-md-6 {
+  margin: 5px;
+  box-shadow: 0 1px 1px #ddd inset;
+  border: 1px solid #cccccc;
+  background: #fff;
+  padding: 1em;
+}
+.columns-2:before {
+  background: none repeat scroll 0 0 #007eab;
+  color: #fff;
+  content: "2 Columns";
+  opacity: 0.65;
+  position: absolute;
+  right: 0;
+  top: 0;
+  line-height: 1em;
+  z-index: 9999;
+  display: table; 
+  padding: 2px 4px;
+  border-bottom-left-radius: 3px;
+}
+.columns-2:after {
+  content: " ";
+  display: table;
+  clear: both;
+}
+/* fix for resized images */
+.columns-2 img {
+	width: 100%;
+	height: auto;
+}

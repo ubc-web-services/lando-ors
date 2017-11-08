@@ -1,0 +1,44 @@
+<?php
+/**
+ * @file   research_family_homepage.module
+ * @author James O'Toole
+ *
+ * @brief A module providing a theme block with some homepage content.
+ *
+ *
+ */
+
+
+/**
+* Implements hook_block_info().
+*/
+function research_family_homepage_feature_block_info() {
+  $blocks = array();
+  $blocks['featuredhomecontent'] = array(
+    'info' => t('Featured Image block for the homepage'),
+  );
+  return $blocks;
+}
+/**
+* Implements hook_block_view().
+*/
+function research_family_homepage_feature_block_view($delta = '') {
+  $path = drupal_get_path('module', 'research_family_homepage_feature');
+  $block = array();
+  switch ($delta) {
+    case 'featuredhomecontent':
+      $block['subject'] = '';
+      $block['content'] = _research_family_homepage_feature_content();
+      break;
+  }
+  return $block;
+}
+function _research_family_homepage_feature_content() {
+  $imgpath = variable_get('file_public_path', conf_path() . '/files');
+  $output = '<section class="featurearea non-clf wow fadeIn mobile-pushout" data-wow-duration=".55s" data-wow-delay=".35s">
+      			<img src="/' . $imgpath . '/homepage-feature/featurepic2.jpg" alt="" />
+      			<a href="#start" class="anchor"><span class="icon icon-angle-down"></span></a>
+    		</section>';
+          
+  return $output;
+}

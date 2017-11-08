@@ -1,0 +1,122 @@
+<?php
+/**
+ * @file   research_family_homepage.module
+ * @author James O'Toole
+ *
+ * @brief A module providing a theme block with some homepage content.
+ *
+ *
+ */
+
+
+/**
+* Implements hook_block_info().
+*/
+function research_family_homepage_block_info() {
+  $blocks = array();
+  $blocks['homecontent'] = array(
+    'info' => t('Theme block for the homepage'),
+  );
+  return $blocks;
+}
+/**
+* Implements hook_block_view().
+*/
+function research_family_homepage_block_view($delta = '') {
+  $path = drupal_get_path('module', 'research_family_homepage');
+  //drupal_add_js($path . '/js/jquery.flexslider-min.js');
+  //drupal_add_js($path . '/js/vpri_homeslides.js');
+  $block = array();
+  switch ($delta) {
+    case 'homecontent':
+      $block['subject'] = '';
+      $block['content'] = _research_family_homepage_content();
+      break;
+  }
+  return $block;
+}
+function _research_family_homepage_content() {
+  $imgpath = variable_get('file_public_path', conf_path() . '/files');
+  //$imgpath = '/sites/research.ubc.ca/themes/vpri/img/';
+  $output = '<div class="container clearfix">
+                <div class="themebox intro">
+                  <a href="/what-we-do">
+                  <div class="inside"><p>Support for your research funding</p></div></a>
+                </div>
+                  
+              <div class="themebox">
+                <a href="/funding-opportunities/upcoming-funding-opportunities">
+                  <div class="inside">
+                    <p>Find upcoming deadlines and opportunities</p></div>
+                  <div class="outside">
+                    <img alt="" title="" src="/' . $imgpath . '/homepage-themes/1.jpg">
+                    <div class="themebox-label">Funding Opportunities <span class="icon icon-angle-right"></span></div>
+                  </div>
+                </a>
+              </div>                
+              
+              <div class="themebox">
+                <a href="/what-we-do/research-roadmap">
+                  <div class="inside"><p>Navigate the seven steps to research administration</p></div>
+                  <div class="outside">
+                    <img alt="" title="" src="/' . $imgpath . '/homepage-themes/2.jpg">
+                    <div class="themebox-label">Research Roadmap <span class="icon icon-angle-right"></span></div>
+                  </div>
+                </a>
+              </div>                
+              
+              <div class="themebox">
+                <a href="/proposal-submission/obtaining-ubc-signature">
+                  <div class="inside"><p>Get the UBC signatures required for you funding proposal</p></div>
+                  <div class="outside">
+                    <img alt="" title="" src="/' . $imgpath . '/homepage-themes/3.jpg">
+                    <div class="themebox-label">Obtaining a Signature <span class="icon icon-angle-right"></span></div>
+                  </div>
+                </a>
+              </div>
+			  
+              <div class="themebox outro">
+                <a href="https://research.ubc.ca/support-resources/forms-tools-resources/research-project-information-form" target="_blank">
+                  <div class="inside"><p>Research Project Information Form<br><button class="btn btn-unit btn-unit-alt">DOWNLOAD</button></p></div>
+                </a>
+              </div>                 
+              
+              <div class="themebox">
+                <a href="/proposal-submission/agency-application-requirements-procedures">
+                  <div class="inside"><p>Learn about agency-specific submission procedures</p></div>
+                  <div class="outside">
+                    <img alt="" title="" src="/' . $imgpath . '/homepage-themes/4.jpg">
+                    <div class="themebox-label">e-Submission Procedures <span class="icon icon-angle-right"></span></div>
+                  </div>
+                </a>
+              </div>                
+              
+              <div class="themebox">
+                <a href="/proposal-development/ubc-identification-numbers">
+                  <div class="inside"><p>Obtain the institutional numbers you need for your application</p></div>
+                  <div class="outside">
+                    <img alt="" title="" src="/' . $imgpath . '/homepage-themes/5.jpg">
+                    <div class="themebox-label">UBC ID Numbers <span class="icon icon-angle-right"></span></div>
+                  </div>
+                </a>
+              </div>                
+              
+              <div class="themebox">
+                <a href="/compliance-reporting/compliance-requirements">
+                  <div class="inside"><p>Meeting legal, ethical and regulatory requirements</p></div>
+                  <div class="outside">
+                    <img alt="" title="" src="/' . $imgpath . '/homepage-themes/6.jpg">
+                    <div class="themebox-label">Compliance <span class="icon icon-angle-right"></span></div>
+                  </div>
+                </a>
+              </div>                
+              
+              <div class="themebox outro xs-full">
+			  	<a href="https://rise.ubc.ca/rise/publiccustomlayouts/cwl/loginShib" target="_blank">
+					<div class="inside"><p>Researcher Information Services<br><button class="btn btn-unit btn-unit-alt">LOGIN TO RISe</button></p></div>
+				</a>
+			</div>
+          </div>';
+          
+  return $output;
+}

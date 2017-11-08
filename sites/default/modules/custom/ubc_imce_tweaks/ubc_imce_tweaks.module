@@ -1,0 +1,8 @@
+<?php
+function ubc_imce_tweaks_init() {
+  if ($_GET['q'] == 'imce') {
+    drupal_add_css(drupal_get_path('module', 'ubc_imce_tweaks') .'/css/ubc_imce-embedded.css');
+    drupal_add_css(drupal_get_path('module', 'ubc_imce_tweaks') .'/css/ubc_imce_tweaks.css');
+    drupal_add_js(drupal_get_path('module', 'ubc_imce_tweaks') .'/js/ubc_imce_tweaks.js');
+  }
+}

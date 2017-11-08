@@ -1,0 +1,7 @@
+name = "UBC IMCE Tweaks"
+description = "Add styles for IMCE to align the presentation with the Adminimal theme."
+package = UBC IT Web Services
+core = "7.x"
+
+version = "7.x-1.0"
+

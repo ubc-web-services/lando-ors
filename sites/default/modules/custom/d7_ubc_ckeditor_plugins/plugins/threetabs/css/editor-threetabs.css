@@ -1,0 +1,43 @@
+.tabs-3 {
+  position: relative;
+  margin: 10px;
+  background: #eee;
+  border: 1px dashed #ddd;
+}
+.tab_container,
+ul.tabs,
+h5.tab_drawer_heading,
+.tab_content {
+  margin: 5px;
+  box-shadow: 0 1px 1px #ddd inset;
+  border: 1px solid #cccccc;
+  background: #fff;
+}
+ul.tabs {
+  list-style: none;
+  margin-bottom: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+.tabs > li {
+  float: left;
+  line-height: 20px;
+  padding: 4px;
+  border: 1px solid #777;
+}
+.tabs-3:before {
+  background: none repeat scroll 0 0 #007eab;
+  color: #fff;
+  content: "3 Tabs";
+  opacity: 0.65;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2px 4px;
+  border-bottom-left-radius: 3px;
+}
+/* fix for resized images */
+.tab_content img {
+	width: 100%;
+	height: auto;
+}
